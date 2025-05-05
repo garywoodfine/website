@@ -1,9 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
-  <div>
-    Page: articles
-  </div>
+  <UPageHero
+      title="Articles"
+      description="Content when it comes will start to appear here"
+      headline="Under construction"
+  />
 </template>
 
 <style scoped></style>
