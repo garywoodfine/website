@@ -26,6 +26,8 @@ business problems "
     <UIcon name="lineicons-postgresql" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="i-simple-icons-microsoftsqlserver" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="codicon-terminal-linux" class="size-16 shrink-0 text-orange-500" />
+    <UIcon name="uil-bitcoin" class="size-16 shrink-0 text-orange-500" />
+    <UIcon name="i-simple-icons-litecoin" class="size-16 shrink-0 text-orange-500" />
   </UPageMarquee>
 </template>
 

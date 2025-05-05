@@ -7,7 +7,7 @@
           <Logo class="h-6 w-auto" />
         </template>
 
-        <UNavigationMenu :items="items" />
+        <UNavigationMenu :items="headerNavigation" />
 
         <template #right>
           <UColorModeButton />
@@ -25,7 +25,7 @@
         </template>
 
         <template #body>
-          <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+          <UNavigationMenu :items="headerNavigation" orientation="vertical" class="-mx-2.5" />
         </template>
       </UHeader>
       <UMain>
@@ -34,17 +34,37 @@
         </NuxtLayout>
       </UMain>
 
-      <UFooter />
+      <UFooter>
+        <template #left>
+          <p class="text-muted text-sm">Copyright © {{ new Date().getFullYear() }} Gary Woodfine</p>
+        </template>
+
+        <UNavigationMenu :items="headerNavigation" variant="link" />
+
+        <template #right>
+
+          <UButton
+              icon="i-simple-icons-github"
+              color="neutral"
+              variant="ghost"
+              to="https://github.com/garywoodfine"
+              target="_blank"
+              aria-label="GitHub"
+          />
+        </template>
+      </UFooter>
     </u-app>
   </div>
 </template>
 <script setup lang="ts">
 import type {NavigationMenuItem} from "#ui/components/NavigationMenu.vue";
 const route = useRoute()
-const items = computed<NavigationMenuItem[]>(() => [{
+const headerNavigation:  NavigationMenuItem[] = [{
   label: 'Articles',
   to: '/articles',
-  active: route.path.startsWith('/getting-started')
-}, ])
+  active: route.path.startsWith('/articles')
+}, ]
+
+
 
 </script>
