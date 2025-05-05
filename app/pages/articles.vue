@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    Page: getting-started
+    Page: articles
   </div>
 </template>
 

@@ -42,8 +42,8 @@
 import type {NavigationMenuItem} from "#ui/components/NavigationMenu.vue";
 const route = useRoute()
 const items = computed<NavigationMenuItem[]>(() => [{
-  label: 'Docs',
-  to: '/getting-started',
+  label: 'Articles',
+  to: '/articles',
   active: route.path.startsWith('/getting-started')
 }, ])
 
