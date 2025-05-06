@@ -1,15 +1,19 @@
-import { defineCollection, defineContentConfig } from '@nuxt/content'
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
     collections: {
         posts: defineCollection({
             type: 'page',
-
             source: {
                 repository: 'https://github.com/garywoodfine/blogs',
                 include: 'content/**',
                 authToken: process.env.GITHUB_CONTENT_TOKEN,
             },
+            schema: z.object({
+                subtitle: z.string(),
+                featureImage: z.object({url: z.string(), alt: z.string()}),
+                date: z.date()
+            })
         })
     }
 })
