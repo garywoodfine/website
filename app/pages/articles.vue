@@ -20,7 +20,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
               v-bind="post"
               :to="post.path"
               :image="`https://res.cloudinary.com/threenine-co-uk/image/upload/${post.featureImage.url}`"
-
           />
 
         </UBlogPosts>

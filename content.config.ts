@@ -6,13 +6,14 @@ export default defineContentConfig({
             type: 'page',
             source: {
                 repository: 'https://github.com/garywoodfine/blogs',
-                include: 'content/**',
+                include: 'posts/**',
                 authToken: process.env.GITHUB_CONTENT_TOKEN,
             },
             schema: z.object({
                 subtitle: z.string(),
                 featureImage: z.object({url: z.string(), alt: z.string()}),
-                date: z.date()
+                date: z.date(),
+                tags: z.array(z.string()),
             })
         })
     }
