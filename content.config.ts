@@ -14,6 +14,7 @@ export default defineContentConfig({
                 featureImage: z.object({url: z.string(), alt: z.string()}),
                 date: z.date(),
                 tags: z.array(z.string()),
+                summary: z.string(),
             })
         })
     }
