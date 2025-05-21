@@ -5,14 +5,13 @@ const route = useRoute()
 let cloudinary = 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
 const {data: post} = await useAsyncData(route.path, () => {
   return queryCollection('posts')
-
       .first()
 })
 useHead({
       link: [
         {
           rel: 'canonical',
-          href: 'https://threenine.blog' + route.path
+          href: 'https://garywoodfine.com' + route.path
         }
       ]
     },
@@ -28,8 +27,6 @@ useSeoMeta({
   twitterImage: () => `${cloudinary + post.value?.featureImage.url}`,
   twitterTitle: () => post.value?.title,
 })
-
-
 </script>
 
 <template>
@@ -48,16 +45,19 @@ useSeoMeta({
     </UPageHero>
 
     <u-page>
+
       <template #left>
         <p></p><p></p>
       </template>
       <template #default>
         <u-page-body >
           <content-renderer :value="post"/>
+          <USeparator />
+
         </u-page-body>
       </template>
       <template #right>
-        <p></p>
+        <p>Cutnet</p><p></p>
       </template>
     </u-page>
 

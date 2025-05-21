@@ -4,11 +4,8 @@
 <template>
   <UPageHero
       title="Gary Woodfine"
-      description="Seasoned back-end software engineer, multiple start-up survivor, adept at
-technical, interpersonal, and leadership capabilities with an additional blend of
-technical expertise, insatiable curiosity, and analytical mindset to solve complex
-business problems "
-      headline="Back-end software engineer"
+      description="Random thoughts and musings regarding the world of technology"
+      headline="Opinionated Software Development"
   />
   <UPageMarquee>
     <UIcon name="mdi-language-csharp" class="size-16 shrink-0 text-orange-500" />
