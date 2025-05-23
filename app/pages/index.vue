@@ -15,7 +15,6 @@
     <UIcon name="bi-currency-dollar" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="streamline-decent-work-and-economic-growth" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="game-icons-anarchy" class="size-16 shrink-0 text-orange-500" />
-    material-symbols:currency-pound
   </UPageMarquee>
 </template>
 
