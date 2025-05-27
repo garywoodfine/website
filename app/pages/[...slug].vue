@@ -57,7 +57,6 @@ useSeoMeta({
         </u-page-body>
       </template>
       <template #right>
-        <p>Cutnet</p><p></p>
       </template>
     </u-page>
 
