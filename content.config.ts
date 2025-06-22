@@ -17,5 +17,6 @@ export default defineContentConfig({
                 summary: z.string(),
             })
         })
-    }
+    },
+
 })
