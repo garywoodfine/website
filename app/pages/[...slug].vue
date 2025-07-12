@@ -3,10 +3,14 @@
 
 const route = useRoute()
 let cloudinary = 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
+
 const {data: post} = await useAsyncData(route.path, () => {
   return queryCollection('posts')
-      .first()
+      .path(route.path).first()
+
 })
+
+
 useHead({
       link: [
         {
