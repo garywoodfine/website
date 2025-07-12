@@ -52,18 +52,6 @@ useSeoMeta({
     </template>
 
   </UPageHero>
-  <UPage v-if="page">
-    <LandingHero :page />
-    <UPageSection
-        :ui="{
-        container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
-      }"
-    >
-      <resume-about :page />
-      <resume-experience :page />
-    </UPageSection>
-  </UPage>
-
   <UPageMarquee>
     <UIcon name="codicon-terminal-linux" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="uil-bitcoin" class="size-16 shrink-0 text-orange-500" />
@@ -82,6 +70,20 @@ useSeoMeta({
     <UIcon name="mdi:github" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="codicon:azure-devops" class="size-16 shrink-0 text-orange-500" />
   </UPageMarquee>
+  <UPage v-if="page">
+    <LandingHero :page />
+    <UPageSection
+        :ui="{
+        container: '!pt-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-8'
+      }"
+    >
+
+      <resume-about :page />
+      <resume-experience :page />
+    </UPageSection>
+  </UPage>
+
+
 </template>
 
 <style scoped></style>
