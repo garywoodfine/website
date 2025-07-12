@@ -10,16 +10,5 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   modules: ['@nuxt/ui-pro', '@nuxt/content'],
-  ui: {
-    icons: {
-      light: 'i-ph-sun',
-      dark: 'i-ph-moon'
-    }
-  },
-  image: {
-    provider: 'cloudinary',
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
-    }
-  },
+
 })

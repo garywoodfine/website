@@ -1,13 +1,24 @@
 <script setup lang="ts">
 const {  global } = useAppConfig()
+const { data: page } = await useAsyncData('index', () => {
+  return queryCollection("index").first()
+})
 
+useSeoMeta({
+  title: page.value?.seo.title || page.value?.title,
+  ogTitle: page.value?.seo.title || page.value?.title,
+  description: page.value?.seo.description || page.value?.description,
+  ogDescription: page.value?.seo.description || page.value?.description
+})
 </script>
 
 <template>
   <UPageHero
       title="Gary Woodfine"
-      description="Random thoughts and musings on the world of Economics, Politics and Technology"
-      headline="The other Gary's economics"
+      description="Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures.
+
+"
+      headline="Backend Software Engineer"
       :ui="{
       headline: 'flex items-center justify-center',
       title: 'text-shadow-md max-w-lg mx-auto',
@@ -32,13 +43,14 @@ const {  global } = useAppConfig()
         }"
       >
         <UColorModeAvatar
-            class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-            :light="global.picture?.light!"
+            class="size-48 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+            :light="global.picture?.light"
             :dark="global.picture?.dark!"
-            :alt="global.picture?.alt!"
+            :alt="global.picture?.alt"
         />
       </Motion>
     </template>
+
   </UPageHero>
   <UPageMarquee>
     <UIcon name="codicon-terminal-linux" class="size-16 shrink-0 text-orange-500" />
