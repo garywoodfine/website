@@ -14,10 +14,8 @@ useSeoMeta({
 
 <template>
   <UPageHero
-      title="Gary Woodfine"
-      description="Back-end software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures.
-
-"
+      :title= "page?.title"
+      :description="page?.description"
       headline="Back-end Software Engineer"
       :ui="{
       headline: 'flex items-center justify-center',
@@ -71,7 +69,7 @@ useSeoMeta({
     <UIcon name="codicon:azure-devops" class="size-16 shrink-0 text-orange-500" />
   </UPageMarquee>
   <UPage v-if="page">
-    <LandingHero :page />
+
     <UPageSection
         :ui="{
         container: '!pt-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-8'

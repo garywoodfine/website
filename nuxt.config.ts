@@ -9,6 +9,6 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
-  modules: ['@nuxt/ui-pro', '@nuxt/content'],
+  modules: ['@nuxt/ui-pro', '@nuxt/content',  'motion-v/nuxt'],
 
 })
