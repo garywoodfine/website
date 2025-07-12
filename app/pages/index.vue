@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {  global } = useAppConfig()
 const { data: page } = await useAsyncData('index', () => {
-  return queryCollection("index").first()
+  return queryCollection('pages').first()
 })
 
 useSeoMeta({
