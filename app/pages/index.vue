@@ -15,10 +15,10 @@ useSeoMeta({
 <template>
   <UPageHero
       title="Gary Woodfine"
-      description="Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures.
+      description="Back-end software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures.
 
 "
-      headline="Backend Software Engineer"
+      headline="Back-end Software Engineer"
       :ui="{
       headline: 'flex items-center justify-center',
       title: 'text-shadow-md max-w-lg mx-auto',
@@ -52,6 +52,18 @@ useSeoMeta({
     </template>
 
   </UPageHero>
+  <UPage v-if="page">
+    <LandingHero :page />
+    <UPageSection
+        :ui="{
+        container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
+      }"
+    >
+      <resume-about :page />
+      <resume-experience :page />
+    </UPageSection>
+  </UPage>
+
   <UPageMarquee>
     <UIcon name="codicon-terminal-linux" class="size-16 shrink-0 text-orange-500" />
     <UIcon name="uil-bitcoin" class="size-16 shrink-0 text-orange-500" />

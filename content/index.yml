@@ -2,4 +2,26 @@ seo:
   title: "Gary Woodfine - Backend Software Engineer"
   description: "Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures."
 title: "Gary Woodfine"
-description: "Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures.."
+description: "Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures."
+about:
+  title: "Back-end Software Engineer"
+  description: |
+    Polyglot software engineer with extensive experience in software engineering, with a passion and desire to 
+    build great scalable software to solve complex business problems.
+experience:
+  title: Recent Experience
+  items:
+    - position: "Lead Back-end Developer"
+      date: "2023 - Present"
+      company:
+        name: Accenture
+        logo: "simple-icons:accenture"
+        url: "https://accenture.com"
+        color: "rgb(161, 0, 255)"
+    - position: "Lead Developer"
+      date: "2019 - 2023"
+      company:
+        name: Veterinary Medicines Directorate
+        logo: "cib:gov-uk"
+        url: "https://www.gov.uk/government/organisations/veterinary-medicines-directorate"
+        color: "#f3f2f1"
