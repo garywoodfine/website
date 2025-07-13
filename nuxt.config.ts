@@ -9,6 +9,8 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
-  modules: ['@nuxt/ui-pro', '@nuxt/content',  'motion-v/nuxt'],
-
+  modules: ['@nuxt/ui-pro', '@nuxt/content',  'motion-v/nuxt', 'nuxt-fathom'],
+  fathom: {
+    siteId: process.env.fathom_analytics_id
+  },
 })
