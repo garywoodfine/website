@@ -21,8 +21,8 @@ const links = ref([
 
     <UPageHero
         title="I'm really sorry."
-        description="The content you were looking for has either been deleted or moved. I have recently re-imagined my blog,
-and as a result a number of articles may have been completely outdated or just lapsed into irrelevance. "
+        description="The content you were looking for has either been deleted or moved. I have recently started to completely re-imagine this blog,
+and as a result a number of articles may have either become completely outdated or just lapsed into irrelevance. Over time I hope to update this blog to reflect the latest technologies and best practices."
         headline="Oops!"
         orientation="horizontal"
         :links="links"
