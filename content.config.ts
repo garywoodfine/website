@@ -14,6 +14,11 @@ const createButtonSchema = () => z.object({
     target: z.enum(['_blank', '_self']).optional()
 })
 
+const createSeoSchema = () => z.object({
+    title: z.string(),
+    description: z.string()
+})
+
 
 export default defineContentConfig({
     collections: {
@@ -36,6 +41,7 @@ export default defineContentConfig({
             type: 'page',
             source: 'index.yml',
             schema: z.object({
+                seo: createSeoSchema(),
                 hero: z.object({
                     links: z.array(createButtonSchema()),
                 }),
@@ -55,6 +61,14 @@ export default defineContentConfig({
 
             })
         }),
+        errorPage: defineCollection({
+            type: 'page',
+            source: 'error-page.yml',
+            schema: z.object({
+                seo: createSeoSchema(),
+            })
+
+        })
     },
 
 })
