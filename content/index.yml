@@ -3,6 +3,13 @@ seo:
   description: "Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures."
 title: "Gary Woodfine"
 description: "Backend software developer, integrator, engineer & solution architect well versed in delivering applications utilizing cloud architectures."
+hero:
+  links:
+    - label: "threenine.co.uk"
+      to: https://threenine.co.uk
+      color: "primary"
+      icon: "material-symbols:home-work"
+
 about:
   title: "Back-end Software Engineer"
   description: |
