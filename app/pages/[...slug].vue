@@ -55,7 +55,7 @@ useSeoMeta({
       </template>
       <template #default>
         <u-page-body >
-          <content-renderer :value="post"/>
+          <content-renderer v-if="post" :value="post"/>
           <USeparator />
 
         </u-page-body>
