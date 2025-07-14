@@ -6,7 +6,7 @@ export default defineAppConfig({
             alt: 'Gary Woodfine'
         },
         meetingLink: 'https://cal.com/',
-        email: 'me@garywoodfine.com',
+        email: 'gary.woodfine@threenine.co.uk',
         available: true
     },
     ui: {
