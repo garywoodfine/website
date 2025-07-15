@@ -15,9 +15,18 @@ const {data: post} = await useAsyncData(`post-${route.path}`, async () => {
   }
   return result
 })
-
-
-
+const {data: surround} = await useAsyncData(`${route.path}-surround`, () =>
+    queryCollectionItemSurroundings('posts', route.path, {
+      fields: ['description']
+    })
+)
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+}
 
 useHead({
       link: [
@@ -42,39 +51,50 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <UPageHero
-        :title="post?.title"
-        :description="post?.description"
-        :headline="post?.subtitle"
-        orientation="horizontal"
-    >
-      <img
-          :src="cloudinary + '/' + post?.featureImage.url"
-          alt="App screenshot"
-          class="rounded-lg shadow-2xl ring ring-default"
-      />
-    </UPageHero>
+  <UMain class="mt-20 px-2">
+    <UContainer class="relative min-h-screen">
 
-    <u-page>
 
-      <template #left>
-        <p></p><p></p>
-      </template>
-      <template #default>
-        <u-page-body >
+      <u-page v-if="post">
+        <div class="flex flex-col gap-3 mt-8">
+          <div class="flex text-xs text-muted items-center justify-center gap-2">
+            <span v-if="post.date">
+              {{ formatDate(post.date) }}
+            </span>
+
+          </div>
+          <NuxtImg
+              :src="post.featureImage.url"
+              :alt="post.title"
+              class="rounded-lg w-full h-[300px] object-cover object-center"
+          />
+          <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
+            {{ post.title }}
+          </h1>
+          <p class="text-muted text-center max-w-2xl mx-auto">
+            {{ post.description }}
+          </p>
+          <div class="flex items-center justify-center gap-2 mt-2">
+            <UUser
+                orientation="vertical"
+                color="neutral"
+                variant="outline"
+                class="justify-center items-center text-center"
+                v-bind="post.author"
+
+            />
+          </div>
+        </div>
+
+        <u-page-body>
           <content-renderer v-if="post" :value="post"/>
-          <USeparator />
-
+          <USeparator/>
+          <UContentSurround :surround/>
         </u-page-body>
-      </template>
-      <template #right>
-      </template>
-    </u-page>
 
-
-
-  </div>
+      </u-page>
+    </UContainer>
+  </UMain>
 
 </template>
 

@@ -27,7 +27,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
                 orientation="horizontal"
                 :to="post.path"
                 v-bind="post"
-                :image="`https://res.cloudinary.com/threenine-co-uk/image/upload/${post.featureImage.url}`"
+                :image="`${post.featureImage.url}`"
                 :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',
               image:

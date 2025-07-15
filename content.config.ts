@@ -22,7 +22,13 @@ const createSeoSchema = () => z.object({
     title: z.string(),
     description: z.string()
 })
-
+const createAuthorSchema = () => z.object({
+    name: z.string(),
+    description: z.string().optional(),
+    username: z.string().optional(),
+    to: z.string().optional(),
+    avatar: createImageSchema().optional()
+})
 
 export default defineContentConfig({
     collections: {
@@ -39,6 +45,7 @@ export default defineContentConfig({
                 date: z.date(),
                 tags: z.array(z.string()),
                 summary: z.string(),
+                author: createAuthorSchema(),
             })
         }),
         pages: defineCollection({
