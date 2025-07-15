@@ -1,8 +1,8 @@
 export default defineAppConfig({
     global: {
         picture: {
-            dark: 'https://res.cloudinary.com/threenine-co-uk/image/upload/garywoodfine-threenine_n23phm',
-            light: 'https://res.cloudinary.com/threenine-co-uk/image/upload/garywoodfine-threenine_n23phm',
+            dark: 'garywoodfine-threenine_n23phm',
+            light: 'garywoodfine-threenine_n23phm',
             alt: 'Gary Woodfine'
         },
         meetingLink: 'https://cal.com/',
@@ -18,11 +18,12 @@ export default defineAppConfig({
             light: 'i-ph-sun',
             dark: 'i-ph-moon'
         },
-        image: {
-            provider: 'cloudinary',
-            cloudinary: {
-                baseURL: 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
-            }
-        },
-    }
+
+    },
+    image: {
+        provider: 'cloudinary',
+        cloudinary: {
+            baseURL: 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
+        }
+    },
 })

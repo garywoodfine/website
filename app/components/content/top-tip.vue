@@ -1,0 +1,8 @@
+<script lang="ts" setup></script>
+<template>
+  <div class="bg-blue-100 rounded-md shadow-lg text-blue-700 px-4 py-3" role="alert">
+    <p class="font-bold"><Icon name="ic:sharp-tips-and-updates" class="h-8 w-8 mr-3" />Top Tip</p>
+    <p class="text-md pl-2 pr-2"><slot name="message" /></p>
+  </div>
+</template>
+<style scoped></style>

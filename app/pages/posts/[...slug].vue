@@ -4,11 +4,19 @@
 const route = useRoute()
 let cloudinary = 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
 
-const {data: post} = await useAsyncData(route.path, () => {
-  return queryCollection('posts')
-      .path(route.path).first()
-
+const {data: post} = await useAsyncData(`post-${route.path}`, async () => {
+  const result = await queryCollection('posts').path(route.path).first()
+  if (!result) {
+    throw createError({
+      statusCode: 404,
+      message: 'Post not found',
+      fatal: true
+    })
+  }
+  return result
 })
+
+
 
 
 useHead({
@@ -66,7 +74,7 @@ useSeoMeta({
 
 
 
-      </div>
+  </div>
 
 </template>
 
@@ -74,3 +82,4 @@ useSeoMeta({
 
 
 </style>
+

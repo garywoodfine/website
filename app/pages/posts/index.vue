@@ -4,14 +4,14 @@ const route = useRoute()
 const { data: posts } = await useAsyncData(route.path, () => {
   return queryCollection('posts')
       .select('path', 'title', 'description', 'subtitle', 'featureImage', 'date')
-     .all()
+      .all()
 })
 
 </script>
 
 <template>
   <u-page>
-     <UPageBody>
+    <UPageBody>
       <UContainer>
         <UBlogPosts orientation="vertical">
           <Motion

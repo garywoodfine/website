@@ -40,10 +40,10 @@ useSeoMeta({
           delay: 0.1
         }"
       >
-        <UColorModeAvatar
-            class="size-48 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-            :light="global.picture?.light"
-            :dark="global.picture?.dark!"
+        <UAvatar
+            class="size-64 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+            :src="global.picture?.light"
+
             :alt="global.picture?.alt"
         />
       </Motion>

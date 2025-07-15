@@ -2,9 +2,9 @@
 import type {NavigationMenuItem} from "#ui/components/NavigationMenu.vue";
 const route = useRoute()
 const headerNavigation:  NavigationMenuItem[] = [{
-  label: 'Articles',
-  to: '/articles',
-  active: route.path.startsWith('/articles')
+  label: 'Posts',
+  to: '/posts',
+  active: route.path.startsWith('/posts')
 }, ]
 </script>
 
