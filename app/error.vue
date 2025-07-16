@@ -6,8 +6,8 @@ const links = ref([
     icon: 'i-simple-line-icons-home'
   },
   {
-    label: 'Articles',
-    to: '/articles',
+    label: 'Posts',
+    to: '/posts',
     color: 'neutral',
     variant: 'subtle',
     trailingIcon: 'i-lucide-arrow-right'

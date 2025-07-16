@@ -72,7 +72,7 @@ useSeoMeta({
             {{ post.title }}
           </h1>
           <p class="text-muted text-center max-w-2xl mx-auto">
-            {{ post.description }}
+            {{ post.subtitle }}
           </p>
           <div class="flex items-center justify-center gap-2 mt-2">
             <UUser
