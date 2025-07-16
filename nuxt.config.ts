@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'motion-v/nuxt',
     'nuxt-fathom',
-    '@nuxt/image',
+    '@nuxt/image'
   ],
   fathom: {
     siteId: process.env.fathom_analytics_id
