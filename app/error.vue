@@ -22,14 +22,15 @@ const links = ref([
     <UPageHero
         title="I'm really sorry."
         description="The content you were looking for is no longer available. I have recently started to completely re-imagine this blog,
-and as a result a number of articles may have either become completely outdated or just lapsed into irrelevance. Over time I hope to update this blog to reflect my interests and new explorations."
+and as a result a number of articles may have either become completely outdated or just lapsed into irrelevance.
+Over time I hope to update this blog to reflect my interests and new explorations."
         headline="Oops!"
         orientation="horizontal"
         :links="links"
     >
       <img
           src="~/assets/images/error-page.svg"
-          alt="App screenshot"
+          alt="Gary Woodfine thumbs down"
           class="rounded-lg shadow-2xl ring ring-default"
       />
     </UPageHero>
