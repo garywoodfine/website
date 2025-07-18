@@ -26,7 +26,7 @@ const formatDate = (dateString: string) => {
 </script>
 
 <template>
-  <div class="container mx-auto pb-3 mt-5 flex justify-center">
+  <div class="container mx-auto pb-2 mt-3 flex justify-center">
     <div v-if="post" class="max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:shadow-orange-50 ">
       <div class="flex justify-between items-center mb-3">
         <span class="font-light text-orange-300">{{ formatDate(post.date) }}</span>
