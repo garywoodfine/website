@@ -43,7 +43,6 @@ useSeoMeta({
         <nuxt-img
             class="size-64 rounded-full ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
             :src="global.picture?.light"
-
             :alt="global.picture?.alt"
         />
       </Motion>
