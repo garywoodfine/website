@@ -46,6 +46,7 @@ export default defineContentConfig({
                 tags: z.array(z.string()),
                 summary: z.string(),
                 author: createAuthorSchema(),
+                category: z.string(),
             })
         }),
         pages: defineCollection({

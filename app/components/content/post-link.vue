@@ -16,10 +16,21 @@ const {data: post} = await useAsyncData(`post-${props.title}`, async () => {
   }
   return result
 })
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('en-GB', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+}
 </script>
 
 <template>
-  <div v-if="post" class="max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md">
+  <div v-if="post" class="max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:shadow-orange-50">
+    <div class="flex justify-between items-center mb-3">
+      <span class="font-light text-orange-300">{{formatDate(post.date)}}</span>
+      <u-badge color="primary" :label="post.category" size="sm"></u-badge>
+    </div>
     <a :href="post.path" class="text-orange-500 hover:underline">{{post?.title}}</a>
     <div class="mt-2"> <p  class="text-sm">{{post?.summary}}</p></div>
     <div class="flex justify-between items-center mt-4">
