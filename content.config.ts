@@ -1,5 +1,5 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
-
+import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 const createBaseSchema = () => z.object({
     title: z.string(),
     description: z.string()
@@ -33,6 +33,12 @@ const createAuthorSchema = () => z.object({
 
 export default defineContentConfig({
     collections: {
+        content: defineCollection(
+            asSitemapCollection({
+                type: 'page',
+                source: '**/**',
+            })
+        ),
         posts: defineCollection({
             type: 'page',
             source: {
@@ -40,6 +46,7 @@ export default defineContentConfig({
                 include: 'posts/**',
                 authToken: process.env.GITHUB_CONTENT_TOKEN,
             },
+
             schema: z.object({
                 subtitle: z.string(),
                 featureImage: z.object({url: z.string(), alt: z.string()}),

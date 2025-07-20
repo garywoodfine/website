@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         '@nuxt/ui-pro',
         '@nuxtjs/seo',
         '@nuxtjs/robots',
+        '@nuxtjs/sitemap',
         '@nuxt/content',
         'motion-v/nuxt',
         'nuxt-fathom',
