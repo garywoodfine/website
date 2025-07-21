@@ -7,10 +7,29 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-05-15',
     devtools: {enabled: true},
     content: {
+        build: {
+            markdown: {
+                highlight: {
+                     theme: {
+                        // Default theme (same as single string)
+                        default: 'github-light',
+                        // Theme used if `html.dark`
+                        dark: 'github-dark',
+                        // Theme used if `html.sepia`
+                        sepia: 'monokai'
+                    },
+                    langs: [
+                        'xml',
+                        'csharp',
+                        'typescript',
+                        'javascript',
+                        'yaml'
+                    ]
+                }
+            }
+        },
         experimental: {nativeSqlite: true},
-        highlight: {
-            langs: Object.keys(bundledLanguages),
-        }
+
     },
     css: ['~/assets/css/main.css'],
     site: {
