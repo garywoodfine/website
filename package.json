@@ -22,6 +22,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.2.57",
     "@iconify-json/material-symbols": "^1.2.30",
     "@iconify-json/simple-icons": "^1.2.44",
     "nuxt-fathom": "^0.0.2"
