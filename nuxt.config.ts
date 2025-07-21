@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { bundledLanguages } from 'shiki'
 export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4,
@@ -7,6 +8,9 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
     content: {
         experimental: {nativeSqlite: true},
+        highlight: {
+            langs: Object.keys(bundledLanguages),
+        }
     },
     css: ['~/assets/css/main.css'],
     site: {
