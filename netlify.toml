@@ -13,6 +13,8 @@ title = "Gary Woodfine Website Netlify Configuration File"
 
 [build.environment]
     NODE_VERSION = "22.16.0"
+    NODE_OPTIONS = "--max-old-space-size=4096"
+
 
 [[redirects]]
     from = "/*"
