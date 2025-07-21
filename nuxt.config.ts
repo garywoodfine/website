@@ -23,7 +23,10 @@ export default defineNuxtConfig({
                         'csharp',
                         'typescript',
                         'javascript',
-                        'yaml'
+                        'yaml',
+                        'shell',
+                        'rust',
+                        'go'
                     ]
                 }
             }
