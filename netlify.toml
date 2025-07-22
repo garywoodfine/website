@@ -34,4 +34,4 @@ title = "Gary Woodfine Website Netlify Configuration File"
             immutable
             '''
 [context.branch-deploy]
-    command = "pnpm run build"
+    command = "NODE_OPTIONS=\"--max-old-space-size=4096\" pnpm run build"
