@@ -36,8 +36,10 @@ export default defineContentConfig({
         content: defineCollection(
             asSitemapCollection({
                 type: 'page',
-                source: '**/**',
-            })
+                source: 'posts/**',
+
+            }),
+
         ),
         posts: defineCollection({
             type: 'page',
@@ -55,6 +57,13 @@ export default defineContentConfig({
                 summary: z.string(),
                 author: createAuthorSchema(),
                 category: z.string(),
+                _sitemap: z.object({
+                    loc: z.string().optional(),
+                    lastmod: z.string().optional(),
+                    changefreq: z.string().optional(),
+                    priority: z.number().optional(),
+                }).optional(),
+
             })
         }),
         pages: defineCollection({
