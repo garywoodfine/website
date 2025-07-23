@@ -12,11 +12,8 @@ export default defineNuxtConfig({
             markdown: {
                 highlight: {
                      theme: {
-                        // Default theme (same as single string)
                         default: 'github-light',
-                        // Theme used if `html.dark`
-                        dark: 'github-dark',
-                        // Theme used if `html.sepia`
+                        dark: 'monokai',
                         sepia: 'monokai'
                     },
                     langs: [
@@ -49,7 +46,6 @@ export default defineNuxtConfig({
         'motion-v/nuxt',
         'nuxt-fathom',
         '@nuxt/image',
-
     ],
     fathom: {
         siteId: process.env.fathom_analytics_id

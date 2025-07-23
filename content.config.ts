@@ -33,39 +33,31 @@ const createAuthorSchema = () => z.object({
 
 export default defineContentConfig({
     collections: {
-        content: defineCollection(
+        posts: defineCollection(
             asSitemapCollection({
                 type: 'page',
-                source: 'posts/**',
-
-            }),
-
-        ),
-        posts: defineCollection({
-            type: 'page',
-            source: {
-                repository: 'https://github.com/garywoodfine/blogs',
-                include: 'posts/**',
-                authToken: process.env.GITHUB_CONTENT_TOKEN,
-            },
-
-            schema: z.object({
-                subtitle: z.string(),
-                featureImage: z.object({url: z.string(), alt: z.string()}),
-                date: z.date(),
-                tags: z.array(z.string()),
-                summary: z.string(),
-                author: createAuthorSchema(),
-                category: z.string(),
-                _sitemap: z.object({
-                    loc: z.string().optional(),
-                    lastmod: z.string().optional(),
-                    changefreq: z.string().optional(),
-                    priority: z.number().optional(),
-                }).optional(),
-
+                schema: z.object({
+                    subtitle: z.string(),
+                    featureImage: z.object({url: z.string(), alt: z.string()}),
+                    date: z.date(),
+                    tags: z.array(z.string()),
+                    summary: z.string(),
+                    author: createAuthorSchema(),
+                    category: z.string(),
+                    _sitemap: z.object({
+                        loc: z.string().optional(),
+                        lastmod: z.string().optional(),
+                        changefreq: z.string().optional(),
+                        priority: z.number().optional(),
+                    }).optional(),
+                }),
+                source: {
+                    repository: 'https://github.com/garywoodfine/blogs',
+                    include: 'posts/**',
+                    authToken: process.env.GITHUB_CONTENT_TOKEN,
+                }
             })
-        }),
+        ),
         pages: defineCollection({
             type: 'page',
             source: 'index.yml',
