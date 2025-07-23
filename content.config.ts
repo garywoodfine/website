@@ -44,12 +44,6 @@ export default defineContentConfig({
                     summary: z.string(),
                     author: createAuthorSchema(),
                     category: z.string(),
-                    _sitemap: z.object({
-                        loc: z.string().optional(),
-                        lastmod: z.string().optional(),
-                        changefreq: z.string().optional(),
-                        priority: z.number().optional(),
-                    }).optional(),
                 }),
                 source: {
                     repository: 'https://github.com/garywoodfine/blogs',
@@ -80,9 +74,7 @@ export default defineContentConfig({
                         })
                     }))
                 }),
-
             })
         }),
     },
-
 })
