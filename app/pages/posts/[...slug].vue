@@ -53,8 +53,6 @@ useSeoMeta({
 <template>
   <UMain class="mt-20 px-2">
     <UContainer class="relative min-h-screen">
-
-
       <u-page v-if="post">
         <div class="flex flex-col gap-3 mt-8">
           <div class="flex text-xs text-muted items-center justify-center gap-2">
@@ -66,7 +64,7 @@ useSeoMeta({
           <NuxtImg
               :src="post.featureImage.url"
               :alt="post.title"
-              class="rounded-lg w-full h-[300px] object-cover object-center"
+              class="rounded-lg w-full h-[400px] object-cover object-center"
           />
           <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ post.title }}
