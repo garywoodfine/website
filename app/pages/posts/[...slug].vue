@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-
 const route = useRoute()
 let cloudinary = 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
 
@@ -79,7 +77,6 @@ useSeoMeta({
                 variant="outline"
                 class="justify-center items-center text-center"
                 v-bind="post.author"
-
             />
           </div>
         </div>
@@ -89,15 +86,10 @@ useSeoMeta({
           <USeparator/>
           <UContentSurround :surround/>
         </u-page-body>
-
       </u-page>
     </UContainer>
   </UMain>
-
 </template>
-
 <style scoped>
-
-
 </style>
 

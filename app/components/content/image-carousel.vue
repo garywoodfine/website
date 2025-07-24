@@ -4,6 +4,17 @@ const props = defineProps({
     type: Array as () => string[],
     required: true
   },
+  size:{
+    type: String,
+    required: false,
+    default: '250'
+  },
+  basis: {
+    type: String,
+    required: false,
+    default: 'basis-1/2'
+  }
+
 })
 </script>
 <template>
@@ -11,12 +22,12 @@ const props = defineProps({
       v-slot="{ item: image }"
       arrows
       dots
-      :ui="{ item: 'basis-1/2' }"
+      :ui="{ item: basis }"
       :items="images"
       :prev="{ color: 'primary', variant: 'solid' }"
       :next="{ color: 'primary', variant: 'solid' }"
   >
-    <NuxtImg :src="image" width="900" height="900" class="rounded-lg" />
+    <NuxtImg :src="image" :width="size" :height="size" class="rounded-lg" />
   </UCarousel>
 </template>
 <style scoped></style>
