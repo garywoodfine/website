@@ -4,12 +4,8 @@ const props = defineProps({
     type: Array as () => string[],
     required: true
   },
-
 })
-
-console.log(props.images)
 </script>
-
 <template>
   <UCarousel
       v-slot="{ item: image }"
@@ -19,10 +15,8 @@ console.log(props.images)
       :items="images"
       :prev="{ color: 'primary', variant: 'solid' }"
       :next="{ color: 'primary', variant: 'solid' }"
-
   >
     <NuxtImg :src="image" width="900" height="900" class="rounded-lg" />
   </UCarousel>
 </template>
-
 <style scoped></style>
