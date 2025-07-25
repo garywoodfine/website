@@ -80,7 +80,15 @@ export default defineContentConfig({
             type: 'page',
             source: 'about.yml',
             schema: createBaseSchema().extend({
-                content: z.object({}),
+                introduction: z.object({}),
+                skills: z.object({
+                    category: z.string(),
+                    technologies: z.array( z.object({
+                        name: z.string(),
+                        icon: z.string(),
+                        level: z.string()
+                    }))
+                })
             })
         })
     },

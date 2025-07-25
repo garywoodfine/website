@@ -19,6 +19,8 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description
 })
+
+
 </script>
 
 <template>
@@ -45,9 +47,16 @@ useSeoMeta({
       }"
     >
       <MDC
-          :value="page.content"
+          :value="page.introduction"
 
       />
+    </UPageSection>
+    <UPageSection>
+      <div class="flex flex-col gap-4" ></div>
+      <skills-list v-for="skill in page.skills"
+      :category="skill.category"
+                   :technologies="skill.technologies"
+      ></skills-list>
     </UPageSection>
   </UPage>
 </template>
