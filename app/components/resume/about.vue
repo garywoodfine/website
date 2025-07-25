@@ -8,6 +8,7 @@ defineProps<{
 
 <template>
   <UPageSection
+      v-if="page"
       :title="page.about.title"
       :description="page.about.description"
       :ui="{
@@ -15,7 +16,18 @@ defineProps<{
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
       description: 'text-left mt-3 text-sm sm:text-md lg:text-sm text-muted'
     }"
-  />
+  >
+    <template #description>
+      <div>
+        <p class="italic">{{page.about.description}}</p>
+      </div>
+      <div class="mt-3">
+       <span class="flex items-center hover:underline text-orange-400"> <nuxt-link :to="page.about.link.to" target="_self" class="">{{ page.about.link.label}}</nuxt-link><icon name="material-symbols:keyboard-double-arrow-right-rounded"/></span>
+      </div>
+
+    </template>
+
+  </UPageSection>
 </template>
 
 <style scoped>

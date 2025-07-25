@@ -17,6 +17,9 @@ about:
     build great scalable software to solve complex business problems.
     A track record in developing high-performance backend systems, optimizing architecture, and ensuring continuous 
     availability of critical APIs.
+  link:
+    label : Read More
+    to: About
 experience:
   title: Recent Engagements
   items:
