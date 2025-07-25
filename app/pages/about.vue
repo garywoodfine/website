@@ -3,7 +3,7 @@
 
 <template>
   <div>
-    <h1>About Me</h1>
+    <h1 class="text-orange-500">About Me</h1>
     <p>Hi, I'm Gary Woodfine, I'm an independent software developer, architect, consultant, blogger, Bitcoin & Nostr Enthusiast.
       I've provided software development expertise and helped augment software development skills and teams for a number of
       startups, product companies, corporate IT shops, and consulting firms.</p>
