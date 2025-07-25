@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type {NavigationMenuItem} from "#ui/components/NavigationMenu.vue";
 const route = useRoute()
+
 const headerNavigation:  NavigationMenuItem[] = [{
   label: 'Posts',
   to: '/posts',
