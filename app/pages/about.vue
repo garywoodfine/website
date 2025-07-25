@@ -46,15 +46,14 @@ useSeoMeta({
         container: '!pt-0'
       }"
     >
-      <MDC
-          :value="page.introduction"
+      <div class="flex flex-col gap-4 text-justify text-lg p-10 italic" >
+        <MDC
+            :value="page.introduction"
 
-      />
-    </UPageSection>
-    <UPageSection>
-      <div class="flex flex-col gap-4" ></div>
+        />
+      </div>
       <skills-list v-for="skill in page.skills"
-      :category="skill.category"
+                   :category="skill.category"
                    :technologies="skill.technologies"
       ></skills-list>
     </UPageSection>
