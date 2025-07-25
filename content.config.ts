@@ -2,7 +2,7 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 const createBaseSchema = () => z.object({
     title: z.string(),
-    description: z.string()
+    description: z.optional(z.string()),
 })
 const createImageSchema = () => z.object({
     src: z.string().editor({ input: 'media' }),
@@ -76,5 +76,12 @@ export default defineContentConfig({
                 }),
             })
         }),
+        about: defineCollection({
+            type: 'page',
+            source: 'about.yml',
+            schema: createBaseSchema().extend({
+                content: z.object({}),
+            })
+        })
     },
 })

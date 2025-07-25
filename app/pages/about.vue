@@ -1,24 +1,55 @@
 <script setup lang="ts">
+const { data: page } = await useAsyncData('about', () => {
+  return queryCollection('about').first()
+})
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
+
+const { global } = useAppConfig()
+
+useSeoMeta({
+  title: page.value?.seo?.title || page.value?.title,
+  ogTitle: page.value?.seo?.title || page.value?.title,
+  description: page.value?.seo?.description || page.value?.description,
+  ogDescription: page.value?.seo?.description || page.value?.description
+})
 </script>
 
 <template>
-  <div>
-    <h1 class="text-orange-500">About Me</h1>
-    <p>Hi, I'm Gary Woodfine, I'm an independent software developer, architect, consultant, blogger, Bitcoin & Nostr Enthusiast.
-      I've provided software development expertise and helped augment software development skills and teams for a number of
-      startups, product companies, corporate IT shops, and consulting firms.</p>
+  <UPage v-if="page">
+  <UPageHero
+         :title="page.title"
+         :description="page.description"
+         orientation="horizontal"
+         :ui="{
+        container: 'lg:flex sm:flex-row items-center',
+        title: '!mx-0 text-left',
+        description: '!mx-0 text-left',
+        links: 'justify-start'
+      }">
+    <nuxt-img
+        class="size-64 rounded-full ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+        :src="global.picture?.light"
+        :alt="global.picture?.alt"
+    />
+  </UPageHero>
+    <UPageSection
+        :ui="{
+        container: '!pt-0'
+      }"
+    >
+      <MDC
+          :value="page.content"
 
-    <p>I started out in the software world back in 1995, building websites with HoTMetaL Pro & ASP and moved on to
-      building web apps with .NET when it released in Beta in 2001, since then, I've shipped systems in just about every industry.</p>
-    <p>Along the path, I have also shipped various platforms & products in Java, PHP, Javascript, Go, Rust, Python & just about
-    any lanaguage or software development framework that has had its moment in the sun, but somehow I have always made way
-    back to .Net.</p>
-
-
-    <p>Over the years, I've strived to improve how I and my teams deliver value to the clients, customers, and end-users.
-      That has led me down the path of exploring Agile, Domain-Driven Design, REST, messaging, distributed systems,
-      and anything else I thought could help.</p>
-  </div>
+      />
+    </UPageSection>
+  </UPage>
 </template>
 
 <style scoped></style>
