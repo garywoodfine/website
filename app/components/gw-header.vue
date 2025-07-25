@@ -5,8 +5,28 @@ const route = useRoute()
 const headerNavigation:  NavigationMenuItem[] = [{
   label: 'Posts',
   to: '/posts',
-  active: route.path.startsWith('/posts')
-}, ]
+
+},
+  {
+    label: 'About',
+    to: '/about',
+  },
+
+]
+
+const active = ref()
+
+defineShortcuts({
+  1: () => {
+    active.value = '0'
+  },
+  2: () => {
+    active.value = '1'
+  },
+  3: () => {
+    active.value = '2'
+  }
+})
 </script>
 
 <template>
