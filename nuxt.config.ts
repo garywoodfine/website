@@ -44,7 +44,7 @@ export default defineNuxtConfig({
         '@nuxtjs/sitemap',
         '@nuxt/content',
         'motion-v/nuxt',
-        'nuxt-fathom',
+        '@threenine/nuxt-fathom',
         '@nuxt/image',
     ],
     fathom: {
