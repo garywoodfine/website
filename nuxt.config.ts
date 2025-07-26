@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { bundledLanguages } from 'shiki'
 export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4,
@@ -24,7 +23,10 @@ export default defineNuxtConfig({
                         'yaml',
                         'shell',
                         'rust',
-                        'go'
+                        'go',
+                        'python',
+                        'terraform',
+                        'json'
                     ]
                 }
             }

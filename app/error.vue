@@ -32,6 +32,7 @@ Over time I hope to update this blog to reflect my interests and new exploration
           src="v1690313878/error-page_x5jkfs"
           alt="Gary Woodfine thumbs down"
           class="rounded-lg shadow-2xl ring ring-default"
+          width="500"
       />
     </UPageHero>
 
