@@ -28,8 +28,8 @@ Over time I hope to update this blog to reflect my interests and new exploration
         orientation="horizontal"
         :links="links"
     >
-      <img
-          src="~/assets/images/error-page.svg"
+      <nuxt-img
+          src="v1690313878/error-page_x5jkfs"
           alt="Gary Woodfine thumbs down"
           class="rounded-lg shadow-2xl ring ring-default"
       />
