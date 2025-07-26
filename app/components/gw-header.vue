@@ -5,13 +5,11 @@ const route = useRoute()
 const headerNavigation:  NavigationMenuItem[] = [{
   label: 'Posts',
   to: '/posts',
-
 },
   {
     label: 'About',
     to: '/about',
   },
-
 ]
 
 const active = ref()

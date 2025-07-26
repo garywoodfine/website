@@ -56,10 +56,5 @@ export default defineNuxtConfig({
             baseURL: 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
         }
     },
-    build: {
-        rollupOptions: {
-            external: ['assets/images/error-page.svg']
-        }
-    }
 
 })
