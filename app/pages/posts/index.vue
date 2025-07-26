@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import Tags from "~/components/tags.vue";
+
 const route = useRoute()
 
 const { data: posts } = await useAsyncData(route.path, () => {
   return queryCollection('posts')
-      .select('path', 'title', 'description', 'subtitle', 'featureImage', 'date')
+      .select('path', 'title', 'category', 'description','summary', 'subtitle', 'featureImage', 'date', 'tags')
       .order('date', 'DESC')
       .all()
 
@@ -39,7 +41,21 @@ const { data: posts } = await useAsyncData(route.path, () => {
                   ? 'sm:-rotate-1 overflow-visible'
                   : 'sm:rotate-1 overflow-visible'
             }"
-            />
+            >
+
+              <template #badge>
+                <u-badge :label="post.category" color="primary" size="md" class="text-xs text-white mr-3"/>
+              </template>
+              <template #description>
+                <div class="text-sm text-muted mt-1 mb-5 justify-between">
+                  {{post.summary}}
+                </div>
+
+                <tags :tags="post.tags" size="xs" />
+              </template>
+
+            </UBlogPost>
+
           </Motion>
         </UBlogPosts>
       </UContainer>
