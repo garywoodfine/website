@@ -23,6 +23,7 @@ defineProps({
             :src="image"
             :title="title"
             class="object-cover resize w-full rounded-2xl"
+            width="1100"
         />
       </a>
     </div>
