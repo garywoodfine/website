@@ -105,3 +105,9 @@ skills:
       - name: Netlify
         icon: lineicons:netlify
         level: advanced
+  - category: Devops
+    technologies:
+      - name: Terraform
+        icon: mdi:terraform
+        level: advanced
+
