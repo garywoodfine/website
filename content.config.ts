@@ -52,6 +52,27 @@ export default defineContentConfig({
                 }
             })
         ),
+        books: defineCollection(
+            asSitemapCollection({
+                type: 'page',
+                schema: z.object({
+                    subtitle: z.string(),
+                    featureImage: z.object({url: z.string(), alt: z.string()}),
+                    date: z.date(),
+                    tags: z.array(z.string()),
+                    summary: z.string(),
+                    author: createAuthorSchema(),
+                    type: z.string(),
+                    affiliate: z.string(),
+                    genre: z.string(),
+                }),
+                source: {
+                    repository: 'https://github.com/garywoodfine/blogs',
+                    include: 'reviews/books/**',
+                    authToken: process.env.GITHUB_CONTENT_TOKEN,
+                }
+            })
+        ),
         pages: defineCollection({
             type: 'page',
             source: 'index.yml',
