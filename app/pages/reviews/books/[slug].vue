@@ -15,7 +15,7 @@ const {data: book} = await useAsyncData(`post-${route.path}`, async () => {
 
 <template>
   <u-page v-if="book">
-    <reviews-books-header :image="book?.featureImage.url"
+    <reviews-books-header :image="book?.image"
                           :link="book.affiliate"
                           :title="book.title"
                           :subtitle="book.subtitle"
@@ -23,6 +23,13 @@ const {data: book} = await useAsyncData(`post-${route.path}`, async () => {
     >
 
     </reviews-books-header>
+    <USeparator/>
+    <u-page-body>
+      <content-renderer v-if="book" :value="book"/>
+      <tags :tags="book.tags" />
+      <USeparator/>
+
+    </u-page-body>
   </u-page>
 </template>
 

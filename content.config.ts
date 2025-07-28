@@ -65,6 +65,7 @@ export default defineContentConfig({
                     type: z.string(),
                     affiliate: z.string(),
                     genre: z.string(),
+                    image:z.string()
                 }),
                 source: {
                     repository: 'https://github.com/garywoodfine/blogs',
