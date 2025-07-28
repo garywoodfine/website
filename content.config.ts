@@ -44,6 +44,7 @@ export default defineContentConfig({
                     summary: z.string(),
                     author: createAuthorSchema(),
                     category: z.string(),
+
                 }),
                 source: {
                     repository: 'https://github.com/garywoodfine/blogs',
@@ -65,7 +66,8 @@ export default defineContentConfig({
                     type: z.string(),
                     affiliate: z.string(),
                     genre: z.string(),
-                    image:z.string()
+                    image:z.string(),
+                    bookAuthor: z.string(),
                 }),
                 source: {
                     repository: 'https://github.com/garywoodfine/blogs',

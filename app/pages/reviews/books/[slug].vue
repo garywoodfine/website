@@ -20,11 +20,13 @@ const {data: book} = await useAsyncData(`post-${route.path}`, async () => {
                           :title="book.title"
                           :subtitle="book.subtitle"
                           :summary="book.summary"
+                          :author="book.bookAuthor"
     >
 
     </reviews-books-header>
     <USeparator/>
     <u-page-body>
+      <p class="text-muted text-4xl">Review</p>
       <content-renderer v-if="book" :value="book"/>
       <tags :tags="book.tags" />
       <USeparator/>
