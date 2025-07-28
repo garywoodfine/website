@@ -11,6 +11,11 @@ defineProps({
   link: {
     type: String,
     required: false
+  },
+  width:{
+    type: [String, Number],
+    required: false,
+    default: '1100'
   }
 })
 </script>
@@ -23,7 +28,7 @@ defineProps({
             :src="image"
             :title="title"
             class="object-cover resize w-full rounded-2xl"
-            width="1100"
+            :width="width"
         />
       </a>
     </div>
