@@ -80,7 +80,6 @@ useSeoMeta({
             />
           </div>
         </div>
-
         <u-page-body>
           <content-renderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
