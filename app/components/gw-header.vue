@@ -7,9 +7,19 @@ const headerNavigation:  NavigationMenuItem[] = [{
   to: '/posts',
 },
   {
+    label:'Reviews',
+    children: [
+      {
+        label: 'Books',
+        to: '/reviews/books',
+      }
+    ]
+  },
+  {
     label: 'About',
     to: '/about',
   },
+
 ]
 
 const active = ref()
