@@ -58,7 +58,6 @@ useSeoMeta({
             <span v-if="post.date">
               {{ formatDate(post.date) }}
             </span>
-
           </div>
           <NuxtImg
               :src="post.featureImage.url"
