@@ -42,7 +42,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
                   : 'sm:rotate-1 overflow-visible'
             }"
             >
-
               <template #badge>
                 <u-badge :label="post.category" color="primary" size="md" class="text-xs text-white mr-3"/>
               </template>
@@ -50,7 +49,6 @@ const { data: posts } = await useAsyncData(route.path, () => {
                 <div class="text-sm text-muted mt-1 mb-5 justify-between italic">
                   {{post.summary}}
                 </div>
-
                 <tags :tags="post.tags" size="xs" />
               </template>
 

@@ -13,10 +13,11 @@ const {data: post} = await useAsyncData(`post-${route.path}`, async () => {
   }
   return result
 })
+
 const {data: surround} = await useAsyncData(`${route.path}-surround`, () =>
     queryCollectionItemSurroundings('posts', route.path, {
       fields: ['description']
-    })
+    }).where("category", "=", post.value?.category)
 )
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
