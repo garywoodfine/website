@@ -43,7 +43,7 @@ defineShortcuts({
       <Logo class="h-6 w-auto" />
     </template>
 
-    <UNavigationMenu :items="headerNavigation" orientation="horizontal" />
+    <UNavigationMenu :items="headerNavigation"  />
 
     <template #right>
       <UColorModeButton />
