@@ -12,7 +12,7 @@ const headerNavigation:  NavigationMenuItem[] = [{
       {
         label: 'Books',
         to: '/reviews/books',
-      }
+      },
     ]
   },
   {
@@ -43,7 +43,7 @@ defineShortcuts({
       <Logo class="h-6 w-auto" />
     </template>
 
-    <UNavigationMenu :items="headerNavigation" />
+    <UNavigationMenu :items="headerNavigation" orientation="horizontal" />
 
     <template #right>
       <UColorModeButton />
@@ -61,7 +61,7 @@ defineShortcuts({
     </template>
 
     <template #body>
-      <UNavigationMenu :items="headerNavigation" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu :items="headerNavigation"  class="w-full justify-center" />
     </template>
   </UHeader>
 </template>

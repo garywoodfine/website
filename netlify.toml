@@ -7,9 +7,10 @@ title = "Gary Woodfine Website Netlify Configuration File"
 [dev]
     framework = "nuxt"
     command = "pnpm run dev" # Command to start your dev server
-    port = 3850
+    port = 8000
     publish = "dist" # The path to your static content folder
     autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
+
 
 [build.environment]
     NODE_VERSION = "22.16.0"
