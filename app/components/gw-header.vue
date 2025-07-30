@@ -44,9 +44,9 @@ defineShortcuts({
     </template>
 
     <UNavigationMenu :items="headerNavigation"  :ui="{
-      viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
-      content: 'sm:w-auto',
-      childList: 'sm:w-96',
+      viewport: 'sm:w-(--reka-navigation-menu-viewport-width) z-[9999]',
+      content: 'sm:w-auto z-50 z-[9999]',
+      childList: 'sm:w-96 z-100 z-[9999]',
       childLinkDescription: 'text-balance line-clamp-2'
     }" />
 
