@@ -44,7 +44,7 @@ defineProps({
     <div class="flex flex-col w-full md:w-2/3 lg:w-3/4 space-y-4">
       <div class="text-center md:text-left">
         <h3 class="text-4xl md:text-4xl font-bold">{{ title }}</h3>
-        <span class="block text-3xl md:text-2xl text-orange-300 mt-2">{{ subtitle }}</span>
+        <span v-if="subtitle" class="block text-3xl md:text-2xl text-orange-300 mt-2">{{ subtitle }}</span>
       </div>
 
       <div class="flex-grow">
