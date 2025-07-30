@@ -52,7 +52,7 @@ useSeoMeta({
 <template>
   <UMain class="mt-20 px-2">
     <UContainer class="relative min-h-screen">
-      <u-page v-if="post">
+      <UPage v-if="post">
         <div class="flex flex-col gap-3 mt-8">
           <div class="flex text-xs text-muted items-center justify-center gap-2">
             <span v-if="post.date">
@@ -80,13 +80,13 @@ useSeoMeta({
             />
           </div>
         </div>
-        <u-page-body>
-          <content-renderer v-if="post" :value="post"/>
+        <UPageBody>
+          <ContentRenderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
           <USeparator/>
           <UContentSurround :surround/>
-        </u-page-body>
-      </u-page>
+        </UPageBody>
+      </UPage>
     </UContainer>
   </UMain>
 </template>

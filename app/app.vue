@@ -1,14 +1,13 @@
 <template>
   <div>
     <NuxtRouteAnnouncer/>
-    <u-app>
+    <UApp>
       <UMain>
         <NuxtLayout>
           <NuxtPage/>
         </NuxtLayout>
       </UMain>
-    </u-app>
-
+    </UApp>
   </div>
 </template>
 <script setup lang="ts">

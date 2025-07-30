@@ -14,7 +14,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
 </script>
 
 <template>
-  <u-page>
+  <UPage>
     <UPageBody>
       <UContainer>
         <UBlogPosts orientation="vertical">
@@ -43,13 +43,13 @@ const { data: posts } = await useAsyncData(route.path, () => {
             }"
             >
               <template #badge>
-                <u-badge :label="post.category" color="primary" size="md" class="text-xs text-white mr-3"/>
+                <UBadge :label="post.category" color="primary" size="md" class="text-xs text-white mr-3"/>
               </template>
               <template #description>
                 <div class="text-sm text-muted mt-1 mb-5 justify-between italic">
                   {{post.summary}}
                 </div>
-                <tags :tags="post.tags" size="xs" />
+                <Tags :tags="post.tags" size="xs" />
               </template>
 
             </UBlogPost>
@@ -58,7 +58,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
         </UBlogPosts>
       </UContainer>
     </UPageBody>
-  </u-page>
+  </UPage>
 </template>
 
 <style scoped></style>

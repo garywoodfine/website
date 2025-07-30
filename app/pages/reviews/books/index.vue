@@ -43,7 +43,7 @@ const { data: books } = await useAsyncData(route.path, () => {
             >
 
               <template #badge>
-                <u-badge :label="book.genre" color="primary" size="md" class="text-xs text-white mr-3"/>
+                <UBadge :label="book.genre" color="primary" size="md" class="text-xs text-white mr-3"/>
               </template>
               <template #description>
                 <div class="text-orange-300 mt-1 mb-2">
@@ -53,7 +53,7 @@ const { data: books } = await useAsyncData(route.path, () => {
                   {{book.summary}}
                 </div>
 
-                <tags :tags="book.tags" size="xs" />
+                <Tags :tags="book.tags" size="xs" />
               </template>
 
             </UBlogPost>
