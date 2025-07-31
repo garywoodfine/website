@@ -16,20 +16,16 @@ const {data: post} = await useAsyncData(`books-${props.title}`, async () => {
   }
   return result
 })
-
 </script>
 
 <template>
   <div class="container mx-auto pb-2 pt-1 mt-3 flex justify-center">
     <div v-if="post" class="max-w-4xl px-10 my-4 py-6 rounded-lg shadow-md dark:shadow-orange-50">
-      <!-- Date and badge at the top -->
       <div class="flex justify-between items-center mb-3">
         <span class="font-light text-orange-300">Book Review</span>
         <u-badge color="primary" :label="post.genre" size="sm"></u-badge>
       </div>
-      <!-- Image and content below -->
       <div class="flex flex-col md:flex-row gap-4">
-        <!-- Book Cover Image on the left -->
         <div class="md:w-1/7">
           <nuxt-img
               v-if="post.image"
@@ -55,8 +51,4 @@ const {data: post} = await useAsyncData(`books-${props.title}`, async () => {
     </div>
   </div>
 </template>
-
-
-
-
 <style scoped></style>
