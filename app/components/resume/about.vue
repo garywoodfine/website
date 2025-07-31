@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 
-import {IndexCollectionItem} from "@nuxt/content";
+import type {IndexCollectionItem} from "@nuxt/content";
 
 defineProps<{
   page: IndexCollectionItem
@@ -23,7 +23,7 @@ defineProps<{
       <div>
         <p class="italic">{{page.about.description}}</p>
       </div>
-      <div class="mt-3">
+      <div v-if="page" class="mt-3">
        <span class="flex items-center hover:underline text-orange-400"> <nuxt-link :to="page.about.link.to" target="_self" class="">{{ page.about.link.label}}</nuxt-link><icon name="material-symbols:keyboard-double-arrow-right-rounded"/></span>
       </div>
 
