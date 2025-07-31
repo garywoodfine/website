@@ -43,7 +43,6 @@ const {data: post} = await useAsyncData(`books-${props.title}`, async () => {
           <a :href="post.path" class="text-orange-500 hover:underline">{{ post.title }}</a>
           <div class="mt-2"><p class="text-sm">{{ post.summary }}</p></div>
           <div class="flex justify-between items-center mt-4">
-
             <div>
               <a class="flex items-center" :href="post.path">
                 <p class="text-orange-500 font-bold text-sm">{{ post.bookAuthor }}</p>
