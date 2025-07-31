@@ -34,7 +34,6 @@ const {data: post} = await useAsyncData(`books-${props.title}`, async () => {
               class="w-full h-auto rounded shadow-sm"
           />
         </div>
-        <!-- Content on the right -->
         <div class="md:w-3/4">
           <a :href="post.path" class="text-orange-500 hover:underline">{{ post.title }}</a>
           <div class="mt-2"><p class="text-sm">{{ post.summary }}</p></div>
