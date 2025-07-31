@@ -38,9 +38,7 @@ const formatDate = (dateString: string) => {
         <a class="text-orange-500 hover:underline text-sm" :href="post.path">Read more</a>
         <div>
           <a class="flex items-center" :href="post.path">
-            <nuxt-img class="mx-4 w-6 h-6 object-cover rounded-full hidden sm:block" :src="post?.author?.avatar?.src"
-                      alt="avatar"/>
-            <p class="text-orange-500 font-bold text-sm">{{ post.author.name }}</p>
+             <p class="text-orange-500 font-bold text-sm">{{ post.author.name }}</p>
           </a>
         </div>
       </div>
