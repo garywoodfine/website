@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Skill } from '~/types/skill'
+import type { Skills } from '~/types/types'
 
 defineProps({
   category: {
@@ -7,7 +7,7 @@ defineProps({
     required: true,
   },
   technologies: {
-    type: Array as () => Skill[],
+    type: Array as () => Skills[],
     default: () => [
       { name: 'C#', icon:'mdi:slack', level: 'Advanced' },
       { name: 'C#', icon:'mdi:slack', level: 'Advanced' },
