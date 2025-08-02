@@ -6,4 +6,3 @@
     <div class="text-md pl-2 pr-2 mt-2 whitespace-pre-line"><slot name="message" /></div>
   </div>
 </template>
-<style scoped></style>
