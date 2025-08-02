@@ -14,10 +14,12 @@ pnpm install
 Install brew 
 ## Development Server
 
-Start the development server on `http://localhost:3850`:
+Start the development server on `http://localhost:8000`:
 
 ```bash
 # netlify
 netlify dev
 ```
+
+
 
