@@ -10,7 +10,6 @@ if (!page.value) {
     fatal: true
   })
 }
-
 const { global } = useAppConfig()
 
 useSeoMeta({
@@ -19,8 +18,6 @@ useSeoMeta({
   description: page.value?.seo?.description || page.value?.description,
   ogDescription: page.value?.seo?.description || page.value?.description
 })
-
-
 </script>
 
 <template>
@@ -46,7 +43,7 @@ useSeoMeta({
         container: '!pt-0'
       }"
     >
-      <div class="flex flex-col gap-4 text-justify text-lg p-10 italic" >
+      <div class="flex flex-col gap-4 text-justify text-lg p-1 italic" >
         <MDC
             :value="page.introduction"
 
