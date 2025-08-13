@@ -70,11 +70,10 @@ useSeoMeta({
           <p class="text-muted text-center max-w-2xl mx-auto">
             {{ post.subtitle }}
           </p>
-          <div class="flex items-center justify-center gap-2 mt-2 items-center">
+          <div class="flex justify-center gap-2 mt-2 items-center">
             <UUser
                 orientation="vertical"
-                color="neutral"    "@threenine/nuxt-zap": "^1.0.1",
-
+                color="neutral"
                 variant="outline"
                 class="justify-center items-center text-center"
                 v-bind="post.author"
