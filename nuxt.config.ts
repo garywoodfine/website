@@ -44,9 +44,13 @@ export default defineNuxtConfig({
         'motion-v/nuxt',
         '@threenine/nuxt-fathom',
         '@nuxt/image',
+        '@threenine/nuxt-zap'
     ],
     fathom: {
         siteId: process.env.fathom_analytics_id
+    },
+    nuxtZap: {
+        zapAddress: 'garywoodfine@getalby.com',
     },
     image: {
         provider: 'cloudinary',

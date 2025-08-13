@@ -70,7 +70,7 @@ useSeoMeta({
           <p class="text-muted text-center max-w-2xl mx-auto">
             {{ post.subtitle }}
           </p>
-          <div class="flex items-center justify-center gap-2 mt-2">
+          <div class="flex items-center justify-center gap-2 mt-2 items-center">
             <UUser
                 orientation="vertical"
                 color="neutral"
@@ -78,6 +78,7 @@ useSeoMeta({
                 class="justify-center items-center text-center"
                 v-bind="post.author"
             />
+            <Zap />
           </div>
         </div>
         <UPageBody>
