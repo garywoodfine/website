@@ -73,12 +73,13 @@ useSeoMeta({
           <div class="flex items-center justify-center gap-2 mt-2 items-center">
             <UUser
                 orientation="vertical"
-                color="neutral"
+                color="neutral"    "@threenine/nuxt-zap": "^1.0.1",
+
                 variant="outline"
                 class="justify-center items-center text-center"
                 v-bind="post.author"
             />
-            <Zap />
+            <ZapButton />
           </div>
         </div>
         <UPageBody>
