@@ -75,7 +75,7 @@ useSeoMeta({
                 orientation="horizontal"
                 color="neutral"
                 variant="outline"
-                class="justify-center items-center text-center"
+                class="justify-center items-center text-center mr-2"
                 v-bind="post.author"
             />
             <ZapButton />
