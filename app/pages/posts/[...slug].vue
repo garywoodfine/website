@@ -72,7 +72,7 @@ useSeoMeta({
           </p>
           <div class="flex justify-center gap-2 mt-2 items-center">
             <UUser
-                orientation="vertical"
+                orientation="horizontal"
                 color="neutral"
                 variant="outline"
                 class="justify-center items-center text-center"
