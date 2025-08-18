@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         siteId: process.env.fathom_analytics_id
     },
     nuxtZap: {
-        zapAddress: 'garywoodfine@getalby.com',
+        zapAddress: process.env.lightning_address,
     },
     image: {
         provider: 'cloudinary',
