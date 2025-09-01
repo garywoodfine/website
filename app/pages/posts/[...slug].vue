@@ -82,14 +82,18 @@ useSeoMeta({
           </div>
         </div>
         <UPageBody>
-          <ContentRenderer v-if="post" :value="post"/>
+          <content-renderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
+          <USeparator/>
+           <nuxstr-comments />
           <USeparator/>
           <UContentSurround :surround/>
         </UPageBody>
+
       </UPage>
     </UContainer>
   </UMain>
+
 </template>
 <style scoped>
 </style>

@@ -36,21 +36,26 @@ export default defineNuxtConfig({
         name: 'Gary Woodfine',
     },
     modules: [
-        '@nuxt/ui-pro',
-        '@nuxtjs/seo',
-        '@nuxtjs/robots',
-        '@nuxtjs/sitemap',
-        '@nuxt/content',
-        'motion-v/nuxt',
-        '@threenine/nuxt-fathom',
-        '@nuxt/image',
-        '@threenine/nuxt-zap'
+      '@nuxt/ui-pro', 
+        '@threenine/nuxstr-comments',
+      '@nuxtjs/seo',
+      '@nuxtjs/robots',
+      '@nuxtjs/sitemap',
+      '@nuxt/content',
+      'motion-v/nuxt',
+      '@threenine/nuxt-fathom',
+      '@nuxt/image',
+      '@threenine/nuxt-zap',
+      
     ],
     fathom: {
         siteId: process.env.fathom_analytics_id
     },
     nuxtZap: {
         zapAddress: process.env.lightning_address,
+    },
+    nuxstrComments: {
+        relays: ['wss://relay.damus.io', 'wss://relay.nostr.band'],
     },
     image: {
         provider: 'cloudinary',

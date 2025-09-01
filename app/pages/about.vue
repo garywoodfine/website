@@ -48,6 +48,7 @@ useSeoMeta({
             :value="page.introduction"
 
         />
+
       </div>
       <skills-list v-for="skill in page.skills"
                    :category="skill.category"
