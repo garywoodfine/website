@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         build: {
             markdown: {
                 highlight: {
-                     theme: {
+                    theme: {
                         default: 'github-light',
                         dark: 'monokai',
                         sepia: 'monokai'
@@ -36,17 +36,16 @@ export default defineNuxtConfig({
         name: 'Gary Woodfine',
     },
     modules: [
-      '@nuxt/ui-pro', 
+        '@nuxt/ui-pro',
         '@threenine/nuxstr-comments',
-      '@nuxtjs/seo',
-      '@nuxtjs/robots',
-      '@nuxtjs/sitemap',
-      '@nuxt/content',
-      'motion-v/nuxt',
-      '@threenine/nuxt-fathom',
-      '@nuxt/image',
-      '@threenine/nuxt-zap',
-      
+        '@nuxtjs/seo',
+        '@nuxtjs/robots',
+        '@nuxtjs/sitemap',
+        '@nuxt/content',
+        'motion-v/nuxt',
+        '@threenine/nuxt-fathom',
+        '@nuxt/image',
+        '@threenine/nuxt-zap',
     ],
     fathom: {
         siteId: process.env.fathom_analytics_id
@@ -55,7 +54,7 @@ export default defineNuxtConfig({
         zapAddress: process.env.lightning_address,
     },
     nuxstrComments: {
-        relays: ['wss://relay.damus.io','wss://a.nos.lol','wss://bitcoiner.social','wss://budabit.nostr1.com','wss://freelay.sovbit.host','wss://relay.unsupervised.online','wss://relay.nostrdice.com'],
+        relays: ['wss://relay.damus.io', 'wss://a.nos.lol', 'wss://bitcoiner.social', 'wss://budabit.nostr1.com', 'wss://freelay.sovbit.host', 'wss://relay.unsupervised.online', 'wss://relay.nostrdice.com'],
     },
     image: {
         provider: 'cloudinary',

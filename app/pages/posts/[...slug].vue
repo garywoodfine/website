@@ -85,7 +85,7 @@ useSeoMeta({
           <content-renderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
           <USeparator/>
-          <UContentSurround :surround/>
+          <UContentSurround v-if="surround" :surround/>
         </UPageBody>
       </UPage>
     </UContainer>
