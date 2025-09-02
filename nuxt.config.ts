@@ -55,7 +55,7 @@ export default defineNuxtConfig({
         zapAddress: process.env.lightning_address,
     },
     nuxstrComments: {
-        relays: ['wss://relay.damus.io', 'wss://relay.nostr.band'],
+        relays: ['wss://relay.damus.io','wss://a.nos.lol','wss://bitcoiner.social','wss://budabit.nostr1.com','wss://freelay.sovbit.host','wss://relay.unsupervised.online','wss://relay.nostrdice.com'],
     },
     image: {
         provider: 'cloudinary',

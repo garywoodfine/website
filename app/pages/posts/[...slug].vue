@@ -85,15 +85,12 @@ useSeoMeta({
           <content-renderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
           <USeparator/>
-           <nuxstr-comments />
-          <USeparator/>
           <UContentSurround :surround/>
         </UPageBody>
-
       </UPage>
     </UContainer>
   </UMain>
-
+  <nuxstr-comments />
 </template>
 <style scoped>
 </style>
