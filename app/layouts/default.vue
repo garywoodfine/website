@@ -3,11 +3,11 @@
 
 <template>
   <div>
+    <gw-header/>
     <UContainer class="sm:border-x border-default pt-10">
-      <gw-header  />
-      <slot />
-      <gw-footer />
+      <slot/>
     </UContainer>
+    <gw-footer/>
   </div>
 </template>
 
