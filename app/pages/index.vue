@@ -15,6 +15,7 @@ useSeoMeta({
 </script>
 
 <template>
+  <UPage v-if="page">
   <UPageHero
       :title= "page?.title"
       :description="page?.description"
@@ -100,7 +101,7 @@ useSeoMeta({
     </template>
   </UPageHero>
 
-  <UPage v-if="page">
+
 
     <UPageSection
         :ui="{
@@ -111,8 +112,9 @@ useSeoMeta({
       <resume-about :page />
       <resume-experience :page />
     </UPageSection>
+    <skills-marquee />
   </UPage>
- <skills-marquee />
+
 
 </template>
 
