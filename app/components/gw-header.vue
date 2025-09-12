@@ -66,7 +66,7 @@ defineShortcuts({
     </template>
 
     <template #body>
-      <UNavigationMenu :items="headerNavigation"  class="w-full justify-center" />
+      <UNavigationMenu :items="headerNavigation"  class="w-full justify-center" orientation="vertical" />
     </template>
   </UHeader>
 </template>

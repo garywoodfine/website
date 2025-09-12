@@ -43,5 +43,5 @@
     "@iconify-json/uil": "^1.2.3",
     "@threenine/nuxt-fathom": "^0.0.10"
   },
-  "packageManager": "pnpm@10.15.1"
+  "packageManager": "pnpm@10.16.0"
 }

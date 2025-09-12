@@ -32,7 +32,7 @@ const items = computed(() => (products.value || []).map((product) => ({
       <UPageCard
           v-for="(card, index) in items"
           :key="index"
-          class="border-1 border-primary"
+          class="border-1 border-accented"
       >
         <template #default>
          <a :href="card.to" target="_blank" :title="card.title">

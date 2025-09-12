@@ -2,8 +2,8 @@
 import SkillsMarquee from "~/components/skills-marquee.vue";
 import FeaturedProducts from "~/components/featured-products.vue";
 
-const {  global } = useAppConfig()
-const { data: page } = await useAsyncData('index', () => {
+const {global} = useAppConfig()
+const {data: page} = await useAsyncData('index', () => {
   return queryCollection('pages').first()
 })
 
@@ -17,73 +17,73 @@ useSeoMeta({
 
 <template>
   <UPage v-if="page">
-  <UPageHero
-      :title= "page?.title"
-      :description="page?.description"
-      headline="Back-end Software Engineer"
-      :ui="{
+    <UPageHero
+        :title="page?.title"
+        :description="page?.description"
+        headline="Back-end Software Engineer"
+        :ui="{
       headline: 'flex items-center justify-center',
       title: 'text-shadow-md max-w-lg mx-auto',
       links: 'mt-4 flex-col justify-center items-center'
     }"
-  >
-    <template #headline>
-      <Motion
-          :initial="{
+    >
+      <template #headline>
+        <Motion
+            :initial="{
           scale: 1.1,
           opacity: 0,
           filter: 'blur(20px)',
           color: 'primary'
         }"
-          :animate="{
+            :animate="{
           scale: 1,
           opacity: 1,
           filter: 'blur(0px)'
         }"
-          :transition="{
+            :transition="{
           duration: 0.6,
           delay: 0.1
         }"
-      >
-        <nuxt-img
-            class="size-64 rounded-full ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-            :src="global.picture?.light"
-            :alt="global.picture?.alt"
-        />
-      </Motion>
-    </template>
-    <template #links>
-      <Motion
-          :initial="{
+        >
+          <nuxt-img
+              class="size-64 rounded-full ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
+              :src="global.picture?.light"
+              :alt="global.picture?.alt"
+          />
+        </Motion>
+      </template>
+      <template #links>
+        <Motion
+            :initial="{
           scale: 1.1,
           opacity: 0,
           filter: 'blur(20px)'
         }"
-          :animate="{
+            :animate="{
           scale: 1,
           opacity: 1,
           filter: 'blur(0px)'
         }"
-          :transition="{
+            :transition="{
           duration: 0.6,
           delay: 0.5
         }"
-      >
-        <div
-            v-if="page?.hero.links"
-            class="flex items-center gap-2"
         >
-          <UButton v-bind="page?.hero.links[0]" :color="page?.hero.links[0].color || 'primary'"  >
-
-          </UButton>
-          <UButton
-              :color="global.available ? 'success' : 'error'"
-              variant="ghost"
-              class="gap-2"
-              :to="global.available ? global.meetingLink : ''"
-              :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
+          <div
+              v-if="page?.hero.links"
+              class="flex items-center gap-2"
           >
-            <template #leading>
+            <UButton v-bind="page?.hero.links[0]" :color="page?.hero.links[0].color || 'primary'">
+
+            </UButton>
+            <UButton
+                :color="global.available ? 'success' : 'error'"
+                variant="ghost"
+                class="gap-2"
+                :to="global.available ? global.meetingLink : ''"
+                :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
+            >
+              <template #leading>
               <span class="relative flex size-2">
                 <span
                     class="absolute inline-flex size-full rounded-full opacity-75"
@@ -94,15 +94,14 @@ useSeoMeta({
                     :class="global.available ? 'bg-success' : 'bg-error'"
                 />
               </span>
-            </template>
-          </UButton>
-        </div>
-      </Motion>
+              </template>
+            </UButton>
+          </div>
+        </Motion>
 
 
-    </template>
-  </UPageHero>
-
+      </template>
+    </UPageHero>
 
 
     <UPageSection
@@ -111,11 +110,11 @@ useSeoMeta({
       }"
     >
 
-      <resume-about :page />
-      <resume-experience :page />
+      <resume-about :page/>
+      <resume-experience :page/>
     </UPageSection>
-    <featured-products />
-    <skills-marquee />
+    <featured-products/>
+    <skills-marquee/>
   </UPage>
 
 
