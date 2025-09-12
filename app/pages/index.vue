@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SkillsMarquee from "~/components/skills-marquee.vue";
+import FeaturedProducts from "~/components/featured-products.vue";
 
 const {  global } = useAppConfig()
 const { data: page } = await useAsyncData('index', () => {
@@ -31,7 +32,8 @@ useSeoMeta({
           :initial="{
           scale: 1.1,
           opacity: 0,
-          filter: 'blur(20px)'
+          filter: 'blur(20px)',
+          color: 'primary'
         }"
           :animate="{
           scale: 1,
@@ -112,6 +114,7 @@ useSeoMeta({
       <resume-about :page />
       <resume-experience :page />
     </UPageSection>
+    <featured-products />
     <skills-marquee />
   </UPage>
 

@@ -30,6 +30,20 @@ const createAuthorSchema = () => z.object({
     to: z.string().optional(),
     avatar: createImageSchema().optional()
 })
+const createDocumentSchema = createBaseSchema().extend({
+    short: z.string(),
+    bannerImage: z.object({url: z.string(), alt: z.string()}),
+    productImage: z.object({url: z.string(), alt: z.string()}),
+    date: z.date(),
+    tags: z.array(z.string()),
+    summary: z.string(),
+    author: z.string(),
+    category: z.string(),
+    slug: z.string(),
+    order: z.number(),
+    icon: z.string(),
+    root: z.string()
+})
 
 export default defineContentConfig({
     collections: {
@@ -119,6 +133,19 @@ export default defineContentConfig({
                     }))
                 })
             })
+        }),
+        products: defineCollection({
+            type: 'page',
+            schema: createDocumentSchema.extend({
+                version: z.string(),
+                versionDate: z.string(),
+                heading: z.string()
+            }),
+            source: {
+                repository: 'https://github.com/threenine/content',
+                include: 'products/**',
+                authToken: process.env.threenine_github_token,
+            }
         })
     },
 })
