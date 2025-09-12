@@ -35,7 +35,7 @@ const items = computed(() => (products.value || []).map((product) => ({
           class="border-1 border-primary"
       >
         <template #default>
-         <a :href="card.to" target="_blank">
+         <a :href="card.to" target="_blank" :title="card.title">
           <div class="text-sm text-muted mb-2">
             <UBadge size="xl" color="primary" class="mb-2" >
               <template #default>
