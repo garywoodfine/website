@@ -113,8 +113,12 @@ useSeoMeta({
       <resume-about :page/>
       <resume-experience :page/>
     </UPageSection>
-    <featured-products/>
-    <skills-marquee/>
+    <div class="flex flex-col gap-4 text-justify text-lg p-1 italic">
+      <featured-products/>
+    </div>
+    <div class="flex flex-col gap-4 text-justify text-lg p-1 italic">
+      <skills-marquee/>
+    </div>
   </UPage>
 
 
