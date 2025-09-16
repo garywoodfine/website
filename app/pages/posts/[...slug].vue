@@ -64,7 +64,7 @@ useSeoMeta({
               :alt="post.title"
               class="rounded-lg w-full h-[400px] object-cover object-center"
           />
-          <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
+          <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4 capitalize">
             {{ post.title }}
           </h1>
           <p class="text-muted text-center max-w-2xl mx-auto">

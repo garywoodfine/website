@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    Component: download-resume
-  </div>
+  <UPageSection />
 </template>
 
 <style scoped></style>
