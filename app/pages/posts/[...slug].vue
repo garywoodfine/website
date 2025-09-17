@@ -86,9 +86,11 @@ useSeoMeta({
           <tags :tags="post.tags" />
           <USeparator/>
           <UContentSurround v-if="surround" :surround/>
+          <u-separator />
+          <nuxstr-comments />
         </UPageBody>
       </UPage>
-      <nuxstr-comments />
+
     </UContainer>
   </UMain>
 

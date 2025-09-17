@@ -54,7 +54,7 @@ export default defineNuxtConfig({
         zapAddress: process.env.lightning_address,
     },
     nuxstrComments: {
-
+        relays: ['wss://a.nos.lol'],
     },
     image: {
         provider: 'cloudinary',
