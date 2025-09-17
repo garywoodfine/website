@@ -88,9 +88,10 @@ useSeoMeta({
           <UContentSurround v-if="surround" :surround/>
         </UPageBody>
       </UPage>
+      <nuxstr-comments />
     </UContainer>
   </UMain>
-  <nuxstr-comments />
+
 </template>
 <style scoped>
 </style>
