@@ -20,7 +20,7 @@ const {data: surround} = await useAsyncData(`${route.path}-surround`, () =>
     }).where("category", "=", post.value?.category)
 )
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString('en-GB', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
