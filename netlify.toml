@@ -17,10 +17,6 @@ title = "Gary Woodfine Website Netlify Configuration File"
     NODE_OPTIONS = "--max-old-space-size=4096"
 
 
-[[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
 
 [[headers]]
     for = "/manifest.webmanifest"

@@ -9,3 +9,7 @@
 /book-review-daylight-robbery/ /reviews/books/daylight-robbery
 /book-review-building-microservices-2nd-edition/ /reviews/books/building-microservices
 /book-review-api-design-patterns/ /reviews/books/api-design-patterns
+
+
+# SPA fallback - MUST be last
+/*  /index.html  200
