@@ -23,14 +23,14 @@ about:
 experience:
   title: Recent Engagements
   items:
-    - position: "Lead Back-end Developer"
+    - position: "Contractor"
       date: "2023 - Present"
       company:
         name: Accenture
         logo: "simple-icons:accenture"
         url: "https://accenture.com"
         color: "rgb(161, 0, 255)"
-    - position: "Lead Developer"
+    - position: "Contractor"
       date: "2019 - 2023"
       company:
         name: Veterinary Medicines Directorate
