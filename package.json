@@ -41,7 +41,7 @@
     "@iconify-json/simple-line-icons": "^1.2.1",
     "@iconify-json/tabler": "^1.2.20",
     "@iconify-json/uil": "^1.2.3",
-    "@threenine/nuxt-fathom": "^0.0.10"
+    "@threenine/nuxt-fathom": "^0.0.11"
   },
   "packageManager": "pnpm@10.17.0"
 }
