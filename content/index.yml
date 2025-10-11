@@ -24,7 +24,14 @@ experience:
   title: Recent Engagements
   items:
     - position: "Contractor"
-      date: "2023 - Present"
+      date: "2025 - Present"
+      company:
+        name: Defra
+        logo: "cib:gov-uk"
+        url: "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
+        color: "#7d7f7c"
+    - position: "Contractor"
+      date: "2023 - 2025"
       company:
         name: Accenture
         logo: "simple-icons:accenture"
