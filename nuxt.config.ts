@@ -49,6 +49,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@threenine/nuxt-zap',
     ],
+    ogImage: { enabled: false },
     fathom: {
         siteId: process.env.fathom_analytics_id
     },
