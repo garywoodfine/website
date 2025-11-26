@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <UPageMarquee>
+  <UMarquee>
     <UIcon name="codicon-terminal-linux" class="size-16 shrink-0 text-primary" />
     <UIcon name="uil-bitcoin" class="size-16 shrink-0 text-primary" />
     <UIcon name="i-simple-icons-litecoin" class="size-16 shrink-0 text-primary" />
@@ -19,7 +19,7 @@
     <UIcon name="pajamas:terraform" class="size-16 shrink-0 text-primary" />
     <UIcon name="mdi:github" class="size-16 shrink-0 text-primary" />
     <UIcon name="codicon:azure-devops" class="size-16 shrink-0 text-primary" />
-  </UPageMarquee>
+  </UMarquee>
 </template>
 
 <style scoped></style>

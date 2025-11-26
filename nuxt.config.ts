@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         name: 'Gary Woodfine',
     },
     modules: [
-        '@nuxt/ui-pro',
+        '@nuxt/ui',
         '@threenine/nuxstr-comments',
         '@nuxtjs/seo',
         '@nuxtjs/robots',
