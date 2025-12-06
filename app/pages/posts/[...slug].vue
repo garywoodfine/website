@@ -77,6 +77,7 @@ useSeoMeta({
                 variant="outline"
                 class="justify-center items-center text-center mr-2"
                 v-bind="post.author"
+                to="/about"
             />
             <ZapButton />
           </div>
