@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const {data: book} = await useAsyncData(`post-${route.path}`, async () => {
+const {data: book} = await useAsyncData(`books-${route.path}`, async () => {
   const result = await queryCollection('books').path(route.path).first()
   if (!result) {
     throw createError({
@@ -11,6 +11,7 @@ const {data: book} = await useAsyncData(`post-${route.path}`, async () => {
   }
   return result
 })
+
 </script>
 
 <template>

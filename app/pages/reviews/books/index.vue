@@ -8,7 +8,6 @@ const { data: books } = await useAsyncData(route.path, () => {
       .select('path', 'title', 'genre', 'description','summary', 'subtitle', 'featureImage', 'date', 'tags')
       .order('date', 'DESC')
       .all()
-
 })
 </script>
 

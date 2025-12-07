@@ -2,7 +2,7 @@
 const route = useRoute()
 let cloudinary = 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
 
-const {data: post} = await useAsyncData(`post-${route.path}`, async () => {
+const {data: post} = await useAsyncData(`posts-${route.path}`, async () => {
   const result = await queryCollection('posts').path(route.path).first()
   if (!result) {
     throw createError({
@@ -86,9 +86,9 @@ useSeoMeta({
           <content-renderer v-if="post" :value="post"/>
           <tags :tags="post.tags" />
           <USeparator/>
-          <UContentSurround v-if="surround" :surround/>
+        <UContentSurround v-if="surround" :surround/>
           <u-separator />
-          <nuxstr-comments />
+
         </UPageBody>
       </UPage>
 

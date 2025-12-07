@@ -58,7 +58,6 @@ export default defineContentConfig({
                     summary: z.string(),
                     author: createAuthorSchema(),
                     category: z.string(),
-
                 }),
                 source: {
                     repository: 'https://github.com/garywoodfine/blogs',

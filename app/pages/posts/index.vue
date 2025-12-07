@@ -3,12 +3,11 @@ import Tags from "~/components/tags.vue";
 
 const route = useRoute()
 
-const { data: posts } = await useAsyncData(route.path, () => {
+const { data: posts } = await useAsyncData('cunt', () => {
   return queryCollection('posts')
       .select('path', 'title', 'category', 'description','summary', 'subtitle', 'featureImage', 'date', 'tags')
       .order('date', 'DESC')
       .all()
-
 })
 
 </script>
@@ -26,6 +25,7 @@ const { data: posts } = await useAsyncData(route.path, () => {
               :transition="{ delay: 0.2 * index }"
               :in-view-options="{ once: true }"
           >
+
             <UBlogPost
                 variant="naked"
                 orientation="horizontal"
