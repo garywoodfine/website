@@ -1,8 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2025-05-15',
-    devtools: {enabled: true},
+    devtools: {enabled: process.env.NODE_ENV === 'development'},
     ssr: true,
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            concurrency: 1
+        }
+    },
     content: {
         build: {
             markdown: {
@@ -19,10 +25,6 @@ export default defineNuxtConfig({
                         'javascript',
                         'yaml',
                         'shell',
-                        'rust',
-                        'go',
-                        'python',
-                        'terraform',
                         'json'
                     ]
                 }
