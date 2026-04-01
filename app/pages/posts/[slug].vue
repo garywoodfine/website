@@ -91,7 +91,7 @@ useSeoMeta({
 
         </UPageBody>
       </UPage>
-
+     <nuxstr-comments />
     </UContainer>
   </UMain>
 

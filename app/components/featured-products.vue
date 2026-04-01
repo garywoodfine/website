@@ -16,8 +16,8 @@ const {data: products} = await useAsyncData(`threenine-products`, async () => {
 const items = computed(() => (products.value || []).map((product) => ({
   title: product.title,
   description: product.description,
-  icon: product.icon,
-  to: `https://threenine.co.uk/${product.path}`,
+  icon: product.icon || 'material-symbols:shopping-cart-outline',
+  to: `https://threenine.io/${product.path}`,
   target: '_blank',
   image: product.productImage.url
 })))

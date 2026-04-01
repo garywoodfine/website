@@ -3,7 +3,6 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-05-15',
     devtools: {enabled: true},
     ssr: true,
-    debug: true,
     content: {
         build: {
             markdown: {
@@ -29,7 +28,9 @@ export default defineNuxtConfig({
                 }
             }
         },
-        experimental: {nativeSqlite: true},
+        experimental: {
+            nativeSqlite: true
+        }
 
     },
     css: ['~/assets/css/main.css'],
@@ -57,7 +58,7 @@ export default defineNuxtConfig({
         zapAddress: process.env.lightning_address,
     },
     nuxstrComments: {
-        relays: ['wss://a.nos.lol'],
+        relays: ['wss://relay.threenine.services'],
     },
     image: {
         provider: 'cloudinary',
@@ -65,5 +66,22 @@ export default defineNuxtConfig({
             baseURL: 'https://res.cloudinary.com/threenine-co-uk/image/upload/'
         }
     },
+    vite: {
+        server: {
+            fs: {
+                allow: [
+                    '/home/gary/Documents/one-revolution/news/node_modules',
+                    '.'
+                ]
+            }
+        },
+        optimizeDeps: {
+            include: [
+                '@vue/devtools-core',
+                '@vue/devtools-kit',
+                '@unhead/schema-org/vue',
+            ]
+        }
+    }
 
 })
