@@ -31,7 +31,7 @@ const {data: book} = await useAsyncData(`books-${route.path}`, async () => {
       <content-renderer v-if="book" :value="book"/>
       <tags :tags="book.tags" />
       <USeparator/>
-
+      <nuxstr-comments />
     </UPageBody>
   </UPage>
 </template>

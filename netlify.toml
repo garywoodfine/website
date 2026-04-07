@@ -13,7 +13,7 @@ title = "Gary Woodfine Website Netlify Configuration File"
 
 
 [build.environment]
-    NODE_VERSION = "22.20.0"
+    NODE_VERSION = "24.14.0"
     NODE_OPTIONS = "--max-old-space-size=8192"
 
 
