@@ -44,8 +44,6 @@ export default defineNuxtConfig({
         '@nuxt/ui',
         '@threenine/nuxstr-comments',
         '@nuxtjs/seo',
-        '@nuxtjs/robots',
-        '@nuxtjs/sitemap',
         '@nuxt/content',
         'motion-v/nuxt',
         '@threenine/nuxt-fathom',
@@ -87,6 +85,9 @@ export default defineNuxtConfig({
     },
     sitemap: {
         zeroRuntime: true
+    },
+    robots: {
+        enabled: false
     }
 
 })

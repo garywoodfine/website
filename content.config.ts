@@ -61,7 +61,7 @@ export default defineContentConfig({
                 }),
                 source: {
                     repository: {
-                        url: 'https://github.com/threenine/content',
+                        url: 'https://github.com/garywoodfine/blogs',
                         branch: process.env.GITHUB_CONTENT_BRANCH,
                         auth: {
                             username: process.env.GITHUB_CONTENT_USER,
@@ -91,7 +91,7 @@ export default defineContentConfig({
                 }),
                 source: {
                     repository: {
-                        url: 'https://github.com/threenine/content',
+                        url: 'https://github.com/garywoodfine/blogs',
                         branch: process.env.GITHUB_CONTENT_BRANCH,
                         auth: {
                             username: process.env.GITHUB_CONTENT_USER,
