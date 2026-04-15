@@ -60,9 +60,16 @@ export default defineContentConfig({
                     category: z.string(),
                 }),
                 source: {
-                    repository: 'https://github.com/garywoodfine/blogs',
+                    repository: {
+                        url: 'https://github.com/garywoodfine/blogs',
+                        branch: process.env.GITHUB_CONTENT_BRANCH,
+                        auth: {
+                            username: process.env.GITHUB_CONTENT_USER,
+                            token: process.env.GITHUB_CONTENT_TOKEN
+                        }
+                    },
                     include: 'posts/**',
-                    authToken: process.env.GITHUB_CONTENT_TOKEN,
+
                 }
             })
         ),
@@ -83,9 +90,15 @@ export default defineContentConfig({
                     bookAuthor: z.string(),
                 }),
                 source: {
-                    repository: 'https://github.com/garywoodfine/blogs',
+                    repository: {
+                        url: 'https://github.com/garywoodfine/blogs',
+                        branch: process.env.GITHUB_CONTENT_BRANCH,
+                        auth: {
+                            username: process.env.GITHUB_CONTENT_USER,
+                            token: process.env.GITHUB_CONTENT_TOKEN
+                        }
+                    },
                     include: 'reviews/books/**',
-                    authToken: process.env.GITHUB_CONTENT_TOKEN,
                 }
             })
         ),

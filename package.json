@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "3.9.0",
+    "@nuxt/content": "^3.13.0",
     "@nuxt/image": "1.10.0",
     "@nuxt/ui": "^4.6.0",
     "@nuxtjs/seo": "^3.2.2",
