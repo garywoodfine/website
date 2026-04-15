@@ -154,9 +154,15 @@ export default defineContentConfig({
                 heading: z.string()
             }),
             source: {
-                repository: 'https://github.com/threenine/content',
                 include: 'products/**',
-                authToken: process.env.threenine_github_token,
+                repository: {
+                    url: 'https://github.com/threenine/content',
+                    branch: process.env.GITHUB_CONTENT_BRANCH,
+                    auth: {
+                        username: process.env.GITHUB_CONTENT_USER,
+                        token: process.env.GITHUB_CONTENT_TOKEN
+                    }
+                },
             }
         })
     },
