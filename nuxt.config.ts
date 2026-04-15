@@ -84,6 +84,9 @@ export default defineNuxtConfig({
                 '@unhead/schema-org/vue',
             ]
         }
+    },
+    sitemap: {
+        zeroRuntime: true
     }
 
 })
