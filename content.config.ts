@@ -65,7 +65,7 @@ export default defineContentConfig({
                         branch: process.env.GITHUB_CONTENT_BRANCH,
                         auth: {
                             username: process.env.GITHUB_CONTENT_USER,
-                            token: process.env.GITHUB_CONTENT_TOKEN
+                            token: process.env.GITHUB_GARY_TOKEN
                         }
                     },
                     include: 'posts/**',
@@ -95,7 +95,7 @@ export default defineContentConfig({
                         branch: process.env.GITHUB_CONTENT_BRANCH,
                         auth: {
                             username: process.env.GITHUB_CONTENT_USER,
-                            token: process.env.GITHUB_CONTENT_TOKEN
+                            token: process.env.GITHUB_GARY_TOKEN
                         }
                     },
                     include: 'reviews/books/**',
