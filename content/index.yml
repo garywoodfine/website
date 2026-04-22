@@ -24,23 +24,8 @@ experience:
   title: Recent Engagements
   items:
     - position: "Contractor"
-      date: "2025 - Present"
+      date: "2005 - present"
       company:
-        name: Defra
-        logo: "cib:gov-uk"
-        url: "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs"
-        color: "#7d7f7c"
-    - position: "Contractor"
-      date: "2023 - 2025"
-      company:
-        name: Accenture
-        logo: "simple-icons:accenture"
-        url: "https://accenture.com"
-        color: "rgb(161, 0, 255)"
-    - position: "Contractor"
-      date: "2019 - 2023"
-      company:
-        name: Veterinary Medicines Directorate
-        logo: "cib:gov-uk"
-        url: "https://www.gov.uk/government/organisations/veterinary-medicines-directorate"
+        name: threenine.io
+        url: "https://threenine.io"
         color: "#7d7f7c"
