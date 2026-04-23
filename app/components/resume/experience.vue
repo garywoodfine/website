@@ -1,14 +1,22 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+const { data: posts } = await useAsyncData('latest-posts', () => {
+  return queryCollection('posts')
+      .order('date', 'DESC')
+      .limit(3)
+      .all()
+})
 
-defineProps<{
-  page: IndexCollectionItem
-}>()
+const formatDate = (date: string | Date) => {
+  return new Date(date).toLocaleDateString('en-GB', {
+    year: 'numeric',
+    month: 'short'
+  })
+}
 </script>
 
 <template>
   <UPageSection
-      :title="page.experience.title"
+      title="Latest Posts"
       :ui="{
       container: '!p-0 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
@@ -18,8 +26,8 @@ defineProps<{
     <template #description>
       <div class="flex flex-col gap-2">
         <Motion
-            v-for="(experience, index) in page.experience.items"
-            :key="index"
+            v-for="(post, index) in posts"
+            :key="post.path"
             :initial="{ opacity: 0, transform: 'translateY(20px)' }"
             :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
             :transition="{ delay: 0.4 + 0.2 * index }"
@@ -27,23 +35,21 @@ defineProps<{
             class="text-muted flex items-center text-nowrap gap-2"
         >
           <p class="text-sm">
-            {{ experience.date }}
+            {{ formatDate(post.date) }}
           </p>
           <USeparator />
           <ULink
-              class="flex items-center gap-1"
-              :to="experience.company.url"
-              target="_blank"
+              class="flex items-center gap-1 group"
+              :to="post.path"
           >
-            <span class="text-sm">
-              {{ experience.position }}
+            <span class="text-sm truncate max-w-37.5 sm:max-w-50 md:max-w-none group-hover:text-primary transition-colors">
+              {{ post.title }}
             </span>
             <div
-                class="inline-flex items-center gap-1"
-                :style="{ color: experience.company.color }"
+                class="inline-flex items-center gap-1 text-primary"
             >
-              <span class="font-medium">{{ experience.company.name }}</span>
-              <UIcon :name="experience.company.logo" />
+              <span class="font-medium text-xs">{{ post.category }}</span>
+              <UIcon name="i-ph-arrow-up-right" class="size-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </ULink>
         </Motion>

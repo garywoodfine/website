@@ -111,7 +111,7 @@ useSeoMeta({
     >
 
       <resume-about :page/>
-      <resume-experience :page/>
+      <resume-experience />
     </UPageSection>
     <div class="flex flex-col gap-4 text-justify text-lg p-1 italic">
       <featured-products/>
